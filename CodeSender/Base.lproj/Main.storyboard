@@ -43,14 +43,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-eR-geb">
+                                <rect key="frame" x="20" y="307" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGk-JT-aLl">
+                                <rect key="frame" x="20" y="348" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SGk-JT-aLl" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="2es-fu-C1e"/>
                             <constraint firstItem="prp-eL-HkX" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="9ib-Vl-IaS"/>
+                            <constraint firstItem="l6s-eR-geb" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="FyZ-1H-mXE"/>
                             <constraint firstItem="jUu-9E-Dnx" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="QOi-sf-uge"/>
+                            <constraint firstItem="l6s-eR-geb" firstAttribute="top" secondItem="jUu-9E-Dnx" secondAttribute="bottom" constant="80" id="Uz8-sf-FrF"/>
+                            <constraint firstItem="I0M-dn-FRg" firstAttribute="top" secondItem="jUu-9E-Dnx" secondAttribute="bottom" constant="40" id="VaE-Se-aZz"/>
                             <constraint firstItem="hxY-Xt-xBy" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="WyB-MQ-LLT"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="prp-eL-HkX" secondAttribute="trailing" constant="20" id="ZDw-1m-7dY"/>
-                            <constraint firstItem="I0M-dn-FRg" firstAttribute="top" secondItem="jUu-9E-Dnx" secondAttribute="bottom" constant="40" id="dT3-M1-zco"/>
+                            <constraint firstItem="SGk-JT-aLl" firstAttribute="top" secondItem="l6s-eR-geb" secondAttribute="bottom" constant="20" id="ipg-nK-dkb"/>
                             <constraint firstItem="I0M-dn-FRg" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="nOQ-Gv-yK6"/>
                             <constraint firstItem="prp-eL-HkX" firstAttribute="top" secondItem="hxY-Xt-xBy" secondAttribute="bottom" constant="40" id="rZV-P0-R2C"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="jUu-9E-Dnx" secondAttribute="trailing" constant="20" id="sxZ-Ip-wrO"/>
@@ -63,6 +79,7 @@
                     <connections>
                         <outlet property="msgText" destination="jUu-9E-Dnx" id="zzi-24-xNA"/>
                         <outlet property="toRecipient" destination="prp-eL-HkX" id="X5e-T2-Hff"/>
+                        <outlet property="translation" destination="SGk-JT-aLl" id="B2T-bk-HFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

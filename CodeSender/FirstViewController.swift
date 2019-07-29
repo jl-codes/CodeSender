@@ -15,6 +15,8 @@ class FirstViewController: UIViewController {
   
   @IBOutlet weak var msgText: UITextField!
   
+  @IBOutlet weak var translation: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -37,13 +39,27 @@ extension FirstViewController: MFMessageComposeViewControllerDelegate {
       break
     }
   }
-
+  
   @IBAction func onSend(_ sender: UIButton) {
+    
     
     if MFMessageComposeViewController.canSendText() {
       
       let controller = MFMessageComposeViewController()
-      controller.body = self.msgText.text
+      
+      do {
+        if let pigLatinTranslation = try Cryptor(string: self.msgText.text) {
+          translation.text = pigLatinTranslation.translate()
+          controller.body = pigLatinTranslation.translate()
+        }
+      } catch CryptorError.invalidString {
+        controller.body = "No string entered"
+      } catch {
+        controller.body = "Input text only"
+      }
+      
+      //controller.body = self.msgText.text
+      //controller.body =
       controller.recipients = ([self.toRecipient.text]) as? [String]
       controller.messageComposeDelegate = self
       
